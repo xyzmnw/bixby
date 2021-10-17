@@ -1,0 +1,35 @@
+structure (Articles) {
+  description (__DESCRIPTION__)
+  property (source) {
+    type (Source)
+    min (Optional) max (One)
+  }
+  property (author) {
+    type (Author)
+    min (Optional) max (One)
+  }
+  property (title) {
+    type (Title)
+    min (Optional) max (One)
+  }
+  property (description) {
+    type (Description)
+    min (Optional) max (One)
+  }
+  property (url) {
+    type (Url)
+    min (Optional) max (One)
+  }
+  property (urlToImage) {
+    type (UrlToImage)
+    min (Optional) max (One)
+  }
+  property (publishedAt) {
+    type (PublishedAt)
+    min (Optional) max (One)
+  }
+   property (content) {
+    type (Content)
+    min (Optional) max (One)
+  }
+}
