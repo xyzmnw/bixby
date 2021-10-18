@@ -8,6 +8,14 @@ module.exports.function = function search(q, language,domains) {
   var ret = {}
 
   if (typeof (domains) != "undefined") {
+    
+    let checkDomain=new String(domains);
+    var checkIndex=checkDomain.lastIndexOf('.com');
+
+    if(checkIndex==-1){
+      domains=checkDomain.concat('.com');
+    }
+
     options["domains"] = domains
   }
   if (typeof (q) != "undefined") {
@@ -30,23 +38,23 @@ module.exports.function = function search(q, language,domains) {
   const artPack = [];
   for (let k = 0; k < sizeOfRes; k++) {
      
-     let  pageUrl = new String(ret.articles[k].url);
+    let  pageUrl = new String(ret.articles[k].url);
 
     var strtIndex = 8;
+
     if (pageUrl.indexOf('www.') != -1) {
+
       strtIndex = pageUrl.indexOf('www.');
-     
       strtIndex += 4;
+
     }
+
     var endIndex = pageUrl.indexOf('/',strtIndex);
     
-
-
     var faviUrl = "https://www.google.com/s2/favicons?domain="
    
-
     let domainName = pageUrl.substring(strtIndex, endIndex);
-     faviUrl = faviUrl.concat(domainName);
+    faviUrl = faviUrl.concat(domainName);
 
     artPack[k] = {
       
