@@ -1,0 +1,46 @@
+layout {
+  match: ArticlePack(this)
+  mode (Details)
+  
+  content {
+    section {
+      content {
+        image-card{
+          
+          aspect-ratio(4:3)
+          title-area{
+            halign (Start)
+            slot1 {
+              text {
+                
+                value("")
+                style (Title_M)
+              }
+            }
+          }
+          
+          image-url("[#{value(this.articles.urlToImage)}]")
+        }
+
+        attribution-link{
+          label{
+            template ("Link to the news")
+          }
+          url("[#{value(this.articles.url)}]")
+        }
+        
+        paragraph {
+          value ("[by #{value(this.articles.author)}]")
+          style (Title_L)
+        }
+        paragraph {
+          value ("[ #{value(this.articles.description)}]")
+          style (Title_L)
+        }
+        
+       
+        
+      }
+    }
+  }
+}

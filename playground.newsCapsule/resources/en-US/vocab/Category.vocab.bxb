@@ -1,0 +1,11 @@
+vocab(Category)
+{
+ "business" {"business" "Businesses" "Business"}
+ "entertainment"{"entertainment"}
+ "general" { "general"}
+ "health"{"health"}
+ "science"{"science"}
+ "sports"{"sports""sport"}
+ "technology"{"technology""technologies"} 
+ 
+}

@@ -1,0 +1,15 @@
+structure (Icon) {
+  description (__DESCRIPTION__)
+  property (src) {
+    type (Src)
+    min (Optional) max (One)
+  }
+   property (type) {
+    type (Type)
+    min (Optional) max (One)
+  }
+   property (sizes) {
+    type (Sizes)
+    min (Optional) max (One)
+  }
+}

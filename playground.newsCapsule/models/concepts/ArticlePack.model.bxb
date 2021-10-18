@@ -1,0 +1,11 @@
+structure (ArticlePack) {
+  description (favicon with article layout)
+  property (articles) {
+    type (Articles)
+    min (Optional) max (One)
+  }
+  property (faviUrl) {
+    type (FaviUrl)
+    min (Optional) max (One)
+  }
+}

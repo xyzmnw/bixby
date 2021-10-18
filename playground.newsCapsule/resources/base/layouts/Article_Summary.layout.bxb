@@ -1,0 +1,69 @@
+layout {
+  match: ArticlePack(this)
+  mode (Summary)
+  
+  content {
+    section {
+      content {
+        image-card{
+          aspect-ratio(4:3)
+          title-area{
+            halign (Start)
+            slot1 {
+              text {
+                
+                value("[#{value(this.articles.title)}]")
+                style (Title_M)
+              }
+            }
+            
+            slot2{
+              single-line{
+                image{
+
+                  url("[#{value(this.faviUrl)}]")
+                  
+                  style(Legal)
+                }
+                spacer{
+                  size (Large)
+                }
+                
+                text{
+                  value("[#{value(this.articles.source.name)}]")
+                  style(Detail_M_Soft)
+                }
+                
+                
+              }
+              
+            }
+            // slot3{
+            
+            //   single-line{
+            //     text{
+            //       value("[#{value(this.publishedAt)}]")
+            
+            //     }
+            //   }
+            // }
+            
+          }
+          
+          image-url("[#{value(this.articles.urlToImage)}]")
+          text-position (Below)
+          
+          
+          
+          
+          on-click {
+            url(this.url)
+            external-link-badge {
+              label(see details)
+            }
+          }
+        }
+      }
+    }
+  }
+}

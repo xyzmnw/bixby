@@ -1,0 +1,10 @@
+enum (Category) {
+  description (__DESCRIPTION__)
+  symbol (business)
+  symbol (entertainment)
+  symbol (general)
+  symbol (health)
+  symbol (science)
+  symbol (sports)
+  symbol (technology)
+}
